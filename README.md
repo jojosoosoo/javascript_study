@@ -9,7 +9,7 @@
 - object
 - symbol
 
-## number 숫자
+## 3.1 number 숫자
 
 - 숫자에는 쌍따옴표(" ") 안 들어감
 
@@ -25,7 +25,7 @@ console.log(c);
 console.log(d);
 ```
 
-## Bigint
+## 3.2 Bigint
 
 - 정수는 15개의 숫자, 15자리 정수까지 나타낼 수 있다
 - 그 이상의 정수를 사용할 때 Bigint형 사용해야 함
@@ -35,7 +35,7 @@ const e = 999999999999999877n;
 console.log(e);
 ```
 
-## string 문자열
+## 3.3 string 문자열
 
 ```js
 // 문자열
@@ -56,7 +56,7 @@ let text3 = `이름: ${username}, 나이: ${age}`;
 console.log(text3);
 ```
 
-## boolean
+## 3.4 boolean
 
 ```js
 let x = 5 > 3; // true
@@ -66,7 +66,7 @@ console.log(x);
 console.log(y);
 ```
 
-## undefined, null(빈 문자열)
+## 3.5 undefined, null(빈 문자열)
 
 ```js
 let x;
@@ -76,7 +76,7 @@ console.log(x);
 console.log(typeof y);
 ```
 
-## object 객체
+## 3.6 object 객체
 
 ```js
 const member = {
@@ -90,7 +90,36 @@ console.log(member.age);
 console.log(member.name);
 ```
 
-## symbol 심볼
+## 3.7 symbol 심볼
 
 - number, string, boolean과 같은 원시데이터의
   유일한 식별자로서, 객체의 속성을 추가하는데 사용
+
+```js
+const member = {
+  name: "홍길동",
+  age: 30,
+};
+
+// symbol()로 심볼id 생성
+let id = Symbol("id");
+// 객체 member의 키 id에 문자열 "kdhong" 저장
+// 심볼 id가 객체의 키로 사용되면 심볼 데이터형은
+// 유일한 식별자이기 때문에 객체의 키 이름이 겹쳐서 충돌하는 경우 방지
+member[id] = "kdhong";
+
+// 객체 member에서 심볼 id가 키로 사용된 요소는
+// member[id]에 의해 접근할 수 있다.
+// 심볼 id와 새롭게 생성된 symbol("id")는 서로 다르다.
+console.log(id === Symbol("id"));
+```
+
+## 3.8 array 배열
+
+- index는 0부터 시작
+
+```js
+const car = ["현대", "기아", "벤츠", "BMW"];
+
+console.log(car[0]);
+```
