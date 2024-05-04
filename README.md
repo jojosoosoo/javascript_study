@@ -1,7 +1,7 @@
 # 15. 이벤트
 
 - 웹 페이지에서 발생하는 사건을 의미
-- 이벤트를 처리하는 함수를 event handler 또는 event listner라고 함
+- 이벤트를 처리하는 함수: event handler 또는 event listner
 
 ## 15.1 Event Handler 이벤트 핸들러
 
